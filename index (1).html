@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vaibhav Lathiya, FCA, CPA | Finance Portfolio</title>
+<meta name="description" content="Finance portfolio of Vaibhav Lathiya, FCA, CPA – Chartered Accountant with 10+ years across the UAE, Oman and India in management reporting, FP&A, IFRS and Microsoft Dynamics 365.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #1b2f4e;
+    --navy-dark: #12213a;
+    --navy-soft: #2c4672;
+    --grey-900: #2b2f36;
+    --grey-700: #4f5661;
+    --grey-500: #7b828d;
+    --grey-200: #e3e6ea;
+    --grey-100: #f3f5f7;
+    --white: #ffffff;
+    --accent: #b08d57;
+    --radius: 6px;
+    --max: 1080px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: "Source Sans 3", "Segoe UI", Arial, sans-serif;
+    color: var(--grey-900);
+    background: var(--white);
+    line-height: 1.6;
+    font-size: 17px;
+  }
+  a { color: var(--navy-soft); }
+  .wrap { max-width: var(--max); margin: 0 auto; padding: 0 20px; }
+
+  /* Navigation */
+  nav {
+    position: sticky; top: 0; z-index: 10;
+    background: var(--navy-dark);
+    border-bottom: 3px solid var(--accent);
+  }
+  nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 58px; gap: 16px; }
+  nav .brand { color: var(--white); font-weight: 700; text-decoration: none; letter-spacing: .3px; white-space: nowrap; }
+  nav ul { list-style: none; display: flex; gap: 22px; overflow-x: auto; }
+  nav ul a { color: #c9d3e3; text-decoration: none; font-size: 15px; white-space: nowrap; }
+  nav ul a:hover { color: var(--white); }
+
+  /* Hero */
+  header.hero { background: var(--navy); color: var(--white); padding: 80px 0 70px; }
+  .hero .monogram {
+    width: 76px; height: 76px; border-radius: 50%;
+    border: 2px solid var(--accent); display: grid; place-items: center;
+    font-size: 28px; font-weight: 700; color: var(--accent); margin-bottom: 22px;
+  }
+  .hero h1 { font-size: 44px; line-height: 1.15; font-weight: 700; }
+  .hero .title { font-size: 20px; color: #c9d3e3; margin-top: 10px; font-weight: 600; }
+  .hero .value { font-size: 19px; max-width: 760px; margin-top: 22px; color: #e6ebf3; }
+  .hero .meta { margin-top: 18px; color: #aebbd0; font-size: 15px; }
+  .btns { margin-top: 30px; display: flex; flex-wrap: wrap; gap: 12px; }
+  .btn {
+    display: inline-block; padding: 11px 22px; border-radius: var(--radius);
+    font-weight: 600; text-decoration: none; font-size: 16px;
+  }
+  .btn-primary { background: var(--accent); color: var(--navy-dark); }
+  .btn-primary:hover { background: #c39f68; }
+  .btn-outline { border: 1px solid #aebbd0; color: var(--white); }
+  .btn-outline:hover { background: rgba(255,255,255,.08); }
+
+  /* Sections */
+  section { padding: 70px 0; }
+  section.alt { background: var(--grey-100); }
+  .section-label { color: var(--accent); font-weight: 700; font-size: 13px; letter-spacing: 1.6px; text-transform: uppercase; }
+  h2 { font-size: 30px; color: var(--navy); margin: 6px 0 26px; line-height: 1.25; }
+  h3 { font-size: 20px; color: var(--navy); line-height: 1.3; }
+  p + p { margin-top: 14px; }
+  .lead { max-width: 820px; color: var(--grey-700); }
+
+  /* Highlights */
+  .metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; }
+  .metric {
+    background: var(--white); border: 1px solid var(--grey-200); border-top: 3px solid var(--navy);
+    border-radius: var(--radius); padding: 22px 20px;
+  }
+  .metric .num { font-size: 32px; font-weight: 700; color: var(--navy); line-height: 1.1; }
+  .metric .lbl { margin-top: 8px; color: var(--grey-700); font-size: 15px; }
+
+  /* Career timeline */
+  .timeline { border-left: 2px solid var(--grey-200); margin-left: 6px; }
+  .role { position: relative; padding: 0 0 26px 26px; }
+  .role::before {
+    content: ""; position: absolute; left: -7px; top: 7px; width: 12px; height: 12px;
+    border-radius: 50%; background: var(--navy); border: 2px solid var(--white);
+  }
+  .role:last-child { padding-bottom: 0; }
+  .role .head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 4px 16px; }
+  .role .org { color: var(--grey-700); font-size: 16px; }
+  .role .dates { color: var(--grey-500); font-size: 15px; font-weight: 600; }
+  .role p { color: var(--grey-700); font-size: 16px; margin-top: 6px; }
+
+  /* Competencies */
+  .chips { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; }
+  .chip {
+    background: var(--white); border: 1px solid var(--grey-200); border-left: 3px solid var(--accent);
+    padding: 13px 16px; border-radius: var(--radius); font-weight: 600; color: var(--grey-900); font-size: 16px;
+  }
+
+  /* Case studies */
+  .cases { display: grid; gap: 22px; }
+  .case { background: var(--white); border: 1px solid var(--grey-200); border-radius: var(--radius); padding: 28px; }
+  .case .tag { display: inline-block; font-size: 13px; font-weight: 600; color: var(--navy-soft); background: #e8edf5; padding: 3px 10px; border-radius: 20px; margin-bottom: 10px; }
+  .case h3 { margin-bottom: 18px; }
+  .case-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px 28px; }
+  .case-grid h4 { font-size: 13px; letter-spacing: 1.2px; text-transform: uppercase; color: var(--accent); margin-bottom: 4px; }
+  .case-grid p, .case-grid li { font-size: 16px; color: var(--grey-700); }
+  .case-grid ul { padding-left: 18px; }
+  .case .file { margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--grey-200); font-size: 15px; }
+  .case .file a { font-weight: 600; text-decoration: none; }
+  .case .file a:hover { text-decoration: underline; }
+
+  /* Skills */
+  .skills { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; }
+  .skill { background: var(--white); border: 1px solid var(--grey-200); border-radius: var(--radius); padding: 22px; }
+  .skill h3 { font-size: 17px; margin-bottom: 10px; }
+  .skill ul { list-style: none; }
+  .skill li { font-size: 16px; color: var(--grey-700); padding: 4px 0; border-bottom: 1px dashed var(--grey-200); }
+  .skill li:last-child { border-bottom: 0; }
+
+  /* Certifications */
+  .certs { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 18px; }
+  .cert { border: 1px solid var(--grey-200); border-radius: var(--radius); padding: 20px 22px; background: var(--white); }
+  .cert .yr { color: var(--grey-500); font-size: 15px; font-weight: 600; }
+  .cert p { color: var(--grey-700); font-size: 16px; margin-top: 2px; }
+  .subhead { font-size: 18px; color: var(--navy); margin: 34px 0 12px; }
+  .plain-list { padding-left: 20px; color: var(--grey-700); }
+  .plain-list li { padding: 3px 0; }
+
+  /* Contact */
+  .contact { background: var(--navy); color: var(--white); }
+  .contact h2 { color: var(--white); }
+  .contact .lead { color: #c9d3e3; }
+  .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-top: 26px; }
+  .contact-item { border: 1px solid #3c5583; border-radius: var(--radius); padding: 18px 20px; }
+  .contact-item .k { font-size: 13px; letter-spacing: 1.2px; text-transform: uppercase; color: var(--accent); font-weight: 700; }
+  .contact-item a, .contact-item span { color: var(--white); text-decoration: none; font-size: 17px; word-break: break-word; }
+  .contact-item a:hover { text-decoration: underline; }
+
+  footer { background: var(--navy-dark); color: #8e9bb2; font-size: 14px; padding: 22px 0; }
+  footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 20px; }
+
+
+  /* Dashboards */
+  .note-banner { background:#fff8ec; border:1px solid #ecdcbf; border-left:4px solid var(--accent); padding:12px 16px; border-radius:var(--radius); color:var(--grey-700); font-size:15px; margin-bottom:26px; }
+  .kpis { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; margin-bottom:22px; }
+  .kpi { background:var(--white); border:1px solid var(--grey-200); border-radius:var(--radius); padding:16px 18px; }
+  .kpi .k { font-size:13px; color:var(--grey-500); font-weight:600; text-transform:uppercase; letter-spacing:.8px; }
+  .kpi .v { font-size:26px; font-weight:700; color:var(--navy); line-height:1.2; margin-top:4px; }
+  .kpi .d { font-size:14px; margin-top:4px; color:var(--grey-700); }
+  .up { color:#2e7d5b; font-weight:600; } .down { color:#b0413e; font-weight:600; }
+  .dash-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; }
+  .panel { background:var(--white); border:1px solid var(--grey-200); border-radius:var(--radius); padding:20px; min-width:0; }
+  .panel.wide { grid-column:1 / -1; }
+  .panel h3 { font-size:17px; margin-bottom:2px; }
+  .panel .sub { font-size:14px; color:var(--grey-500); margin-bottom:12px; }
+  .chart-box { width:100%; }
+  .chart-box svg { display:block; height:auto; }
+  .chart-box svg rect:hover, .chart-box svg circle:hover { opacity:.8; }
+  .scroll-hint { display:none; font-size:13px; color:var(--grey-500); margin-top:4px; }
+  .insight { margin-top:12px; padding-top:10px; border-top:1px dashed var(--grey-200); font-size:15px; color:var(--grey-700); }
+  .insight b { color:var(--navy); }
+  .dash-h { font-size:20px; color:var(--navy); margin:34px 0 14px; }
+  .tbl-wrap { overflow-x:auto; }
+  table.pl { width:100%; border-collapse:collapse; font-size:15px; min-width:560px; }
+  table.pl th { text-align:right; font-size:13px; text-transform:uppercase; letter-spacing:.6px; color:var(--grey-500); padding:8px 10px; border-bottom:2px solid var(--navy); }
+  table.pl th:first-child, table.pl td:first-child { text-align:left; }
+  table.pl td { text-align:right; padding:7px 10px; border-bottom:1px solid var(--grey-200); font-variant-numeric:tabular-nums; }
+  table.pl tr.total td { font-weight:700; color:var(--navy); background:var(--grey-100); }
+  table.pl td.pos { color:#2e7d5b; } table.pl td.neg { color:#b0413e; }
+  .geo { margin-top:26px; }
+  .geo-bar { display:flex; height:38px; border-radius:var(--radius); overflow:hidden; font-size:14px; font-weight:600; color:#fff; }
+  .geo-bar div { display:flex; align-items:center; justify-content:center; white-space:nowrap; padding:0 6px; }
+  .geo-legend { display:flex; justify-content:space-between; font-size:13px; color:var(--grey-500); margin-top:6px; gap:8px; }
+  @media (max-width: 760px) {
+    .dash-grid { grid-template-columns:1fr; }
+    .kpis { grid-template-columns:repeat(2,minmax(0,1fr)); }
+    .chart-box { overflow-x:auto; -webkit-overflow-scrolling:touch; }
+    .chart-box svg { min-width:460px; }
+    .panel.wide .chart-box svg { min-width:680px; }
+    .scroll-hint { display:block; }
+    .kpi .v { font-size:22px; }
+    .geo-bar { font-size:12px; }
+  }
+
+  @media (max-width: 760px) {
+    body { font-size: 16px; }
+    nav ul { gap: 16px; }
+    nav .brand { display: none; }
+    header.hero { padding: 56px 0 50px; }
+    .hero h1 { font-size: 32px; }
+    .hero .title { font-size: 17px; }
+    .hero .value { font-size: 17px; }
+    section { padding: 52px 0; }
+    h2 { font-size: 25px; }
+    .case { padding: 22px 18px; }
+    .case-grid { grid-template-columns: 1fr; }
+  }
+  @media print {
+    nav, .btns { display: none; }
+    header.hero, .contact { background: none; color: var(--grey-900); }
+    .hero .title, .hero .value, .hero .meta, .contact .lead { color: var(--grey-700); }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="#top">Vaibhav Lathiya, FCA, CPA</a>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#competencies">Competencies</a></li>
+      <li><a href="#case-studies">Case Studies</a></li>
+      <li><a href="#dashboards">Dashboards</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#qualifications">Qualifications</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="monogram" aria-hidden="true">VL</div>
+    <h1>Vaibhav Lathiya, FCA, CPA</h1>
+    <p class="title">Finance &amp; Accounting Professional &nbsp;|&nbsp; Management Reporting &middot; FP&amp;A &middot; IFRS &middot; Microsoft Dynamics 365</p>
+    <p class="value">Chartered Accountant and CPA with 10+ years across the UAE, Oman and India. I run disciplined, IFRS-compliant month-end closes and turn ERP data into management information that senior leadership can act on.</p>
+    <p class="meta">Based in Dubai, UAE &nbsp;&middot;&nbsp; Automotive, trading and manufacturing sectors</p>
+    <div class="btns">
+      <a class="btn btn-primary" href="assets/cv.pdf" download>Download CV</a>
+      <a class="btn btn-outline" href="#case-studies">View Case Studies</a>
+    </div>
+  </div>
+</header>
+
+<!-- HIGHLIGHTS -->
+<section class="alt" aria-label="Career highlights">
+  <div class="wrap">
+    <p class="section-label">At a Glance</p>
+    <h2>Career Highlights</h2>
+    <div class="metrics">
+      <div class="metric"><div class="num">10+</div><div class="lbl">Years in finance, accounting and audit</div></div>
+      <div class="metric"><div class="num">3</div><div class="lbl">Countries: UAE, Oman and India</div></div>
+      <div class="metric"><div class="num">5+</div><div class="lbl">Years at Assistant Manager – Finance level</div></div>
+      <div class="metric"><div class="num">FCA + CPA</div><div class="lbl">Dual-qualified: ICAI and CPA Australia</div></div>
+      <div class="metric"><div class="num">5</div><div class="lbl">ERP and accounting systems, led by Dynamics 365 and SAP FICO</div></div>
+    </div>
+    <!--
+      OPTIONAL: Quantified achievements. Add 3–4 cards here once you have
+      non-confidential numbers (percentages, days, counts — never AED amounts). Examples:
+      <div class="metric"><div class="num">X → Y days</div><div class="lbl">Month-end close timeline</div></div>
+      <div class="metric"><div class="num">X%</div><div class="lbl">Reduction in overdue receivables</div></div>
+    -->
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="wrap">
+    <p class="section-label">About</p>
+    <h2>Finance that leadership can rely on</h2>
+    <div class="lead">
+      <p>I am a Chartered Accountant (ICAI) and CPA (CPA Australia) with more than ten years in finance, accounting and audit. That includes over five years as Assistant Manager – Finance in trading, automotive and manufacturing businesses across the UAE, Oman and India.</p>
+      <p>My work covers the full reporting cycle: a controlled month-end close on Microsoft Dynamics 365, IFRS financial statements, and monthly management reports, dashboards and variance analysis for senior management. I support budgeting, forecasting and business performance reviews, and I manage the working capital and cash flow picture behind them.</p>
+      <p>An audit background shapes how I work. Every number in a management report should tie to a reconciled balance, and every balance should have a schedule that stands up to review.</p>
+    </div>
+
+    <div class="geo" aria-label="Career by country">
+      <h3 class="subhead" style="margin-top:0">10+ years across three countries</h3>
+      <div class="geo-bar">
+        <div style="flex:6.1;background:#7b828d">India · 6 yrs</div>
+        <div style="flex:3.0;background:#2c4672">Oman · 3 yrs</div>
+        <div style="flex:1.6;background:#b08d57">UAE</div>
+      </div>
+      <div class="geo-legend"><span>2016 · Audit and CA practice, then industry</span><span>2022 · Muscat</span><span>2025 · Dubai</span></div>
+    </div>
+
+    <h3 class="subhead">Career Journey</h3>
+    <div class="timeline">
+      <div class="role">
+        <div class="head"><h3>Assistant Manager – Finance</h3><span class="dates">Mar 2025 – Present</span></div>
+        <div class="org">MAHY Khoory Group, Dubai, UAE</div>
+        <p>Management reporting, dashboards and variance analysis for senior management; IFRS financial statements and month-end close on Dynamics 365; cash flow forecasting and working capital.</p>
+      </div>
+      <div class="role">
+        <div class="head"><h3>Assistant Manager – Finance</h3><span class="dates">Apr 2022 – Mar 2025</span></div>
+        <div class="org">Zawawi Trading Company LLC, Muscat, Oman</div>
+        <p>MIS for a diversified trading business; budgets, forecasts and performance reviews; IFRS financial statements; Oman VAT compliance and statutory audit coordination.</p>
+      </div>
+      <div class="role">
+        <div class="head"><h3>Assistant Manager – Finance</h3><span class="dates">Apr 2021 – Mar 2022</span></div>
+        <div class="org">Kanoria Chemical &amp; Industries Ltd, Ankleshwar, India</div>
+        <p>Cost, profitability and variance analysis for a manufacturing business; budgeting and management reporting on SAP FICO.</p>
+      </div>
+      <div class="role">
+        <div class="head"><h3>Audit / Accounts Executive</h3><span class="dates">Jun 2019 – Mar 2021</span></div>
+        <div class="org">DP Beladiya &amp; Co., Chartered Accountants, Surat, India</div>
+        <p>Statutory, internal and stock audits; accounts finalisation for multiple clients; GST and income tax compliance.</p>
+      </div>
+      <div class="role">
+        <div class="head"><h3>Article Assistant</h3><span class="dates">Feb 2016 – May 2019</span></div>
+        <div class="org">N.C. Vaishnav &amp; Co. and Mukund &amp; Rohit, Chartered Accountants, Vadodara, India</div>
+        <p>Statutory, internal and tax audits, financial statement preparation, reconciliations and audit working papers.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CORE COMPETENCIES -->
+<section class="alt" id="competencies">
+  <div class="wrap">
+    <p class="section-label">Core Competencies</p>
+    <h2>What I bring to a finance function</h2>
+    <div class="chips">
+      <div class="chip">P&amp;L and Management Accounts Reporting</div>
+      <div class="chip">Profitability and Cost Analysis</div>
+      <div class="chip">Budgeting and Forecasting</div>
+      <div class="chip">Actual vs Budget Variance Analysis</div>
+      <div class="chip">MIS, KPIs and Financial Dashboards</div>
+      <div class="chip">Business Performance Reviews and Decision Support</div>
+      <div class="chip">Month-End Close, Accruals and Inventory Schedules</div>
+      <div class="chip">Working Capital and Cash Flow Management</div>
+      <div class="chip">IFRS Reporting and Internal Financial Controls</div>
+      <div class="chip">Cross-Functional Business Partnering</div>
+    </div>
+  </div>
+</section>
+
+<!-- CASE STUDIES -->
+<section id="case-studies">
+  <div class="wrap">
+    <p class="section-label">Case Studies</p>
+    <h2>How I approach the work</h2>
+    <p class="lead" style="margin-bottom:30px;">Each case study describes the kind of work I lead. Employer names and figures are withheld.</p>
+
+    <div class="cases">
+
+      <!-- CASE 1 -->
+      <article class="case">
+        <span class="tag">Month-End Close &middot; IFRS</span>
+        <h3>Month-End Close and Balance Sheet Closing Framework on Dynamics 365</h3>
+        <div class="case-grid">
+          <div>
+            <h4>Problem</h4>
+            <p>A multi-company automotive and trading group needs a close that delivers IFRS-compliant statements on time, with every balance sheet line supported by a schedule that management and auditors can review.</p>
+          </div>
+          <div>
+            <h4>My Approach</h4>
+            <ul>
+              <li>Closing schedules for accruals, prepayments, IFRS 16 leases, inventory, sales and fixed assets, each tied to the GL</li>
+              <li>Adjusting journals posted in Dynamics 365 with supporting workings</li>
+              <li>Balance sheet, customer, supplier and intercompany reconciliations built into the close checklist</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Tools</h4>
+            <p>Microsoft Dynamics 365 (GL, AR, AP, Fixed Assets), Excel with Power Query</p>
+          </div>
+          <div>
+            <h4>Outcome</h4>
+            <p>Monthly P&amp;L, balance sheet and cash flow statement prepared under IFRS, with a fully supported balance sheet and audit-ready closing files.</p>
+            <!-- ADD METRIC if available, e.g. "Close timeline reduced from X to Y working days" -->
+          </div>
+        </div>
+      </article>
+
+      <!-- CASE 2 -->
+      <article class="case">
+        <span class="tag">MIS &middot; Power BI</span>
+        <h3>Management Reporting Pack and Financial Dashboard</h3>
+        <div class="case-grid">
+          <div>
+            <h4>Problem</h4>
+            <p>Senior management needs a consistent monthly view of revenue, margin, cost and performance against budget, without waiting for manual spreadsheets to be rebuilt each month.</p>
+          </div>
+          <div>
+            <h4>My Approach</h4>
+            <ul>
+              <li>Standard monthly management report structure: P&amp;L, key KPIs and actual vs budget</li>
+              <li>Dynamics 365 data extracted and modelled with Power Query and Power Pivot</li>
+              <li>Power BI dashboard for revenue, cost and profitability trends</li>
+              <li>Variance commentary that explains the drivers, not just the numbers</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Tools</h4>
+            <p>Microsoft Dynamics 365, Excel (Power Query, Power Pivot, VBA), Power BI</p>
+          </div>
+          <div>
+            <h4>Outcome</h4>
+            <p>Better financial reporting and visibility for management, with a repeatable monthly pack that supports business performance reviews.</p>
+            <!-- ADD METRIC if available, e.g. "Pack preparation time reduced by X%" -->
+          </div>
+        </div>
+      </article>
+
+      <!-- CASE 3 -->
+      <article class="case">
+        <span class="tag">Treasury &middot; Working Capital</span>
+        <h3>Cash Flow Forecasting and Working Capital Monitoring</h3>
+        <div class="case-grid">
+          <div>
+            <h4>Problem</h4>
+            <p>Liquidity planning depends on a reliable view of expected receipts and payment commitments, and on early warning when receivables or supplier obligations start to drift.</p>
+          </div>
+          <div>
+            <h4>My Approach</h4>
+            <ul>
+              <li>Daily cash position monitoring</li>
+              <li>Rolling cash flow forecast covering expected receipts and payment requirements</li>
+              <li>Receivables ageing and customer balance reviews, with follow-up alongside sales and credit teams</li>
+              <li>Supplier payment schedules aligned to the cash forecast</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Tools</h4>
+            <p>Microsoft Dynamics 365 (AR, AP, Cash and Bank), Excel</p>
+          </div>
+          <div>
+            <h4>Outcome</h4>
+            <p>Forward visibility of liquidity for operational and supplier payment planning, and closer control over receivables and working capital.</p>
+            <!-- ADD METRIC if available, e.g. "Overdue receivables reduced by X%" or "Forecast accuracy within X%" -->
+          </div>
+        </div>
+      </article>
+
+      <!-- CASE 4 -->
+      <article class="case">
+        <span class="tag">FP&amp;A</span>
+        <h3>Budgeting, Forecasting and Variance Analysis for a Diversified Trading Business</h3>
+        <div class="case-grid">
+          <div>
+            <h4>Problem</h4>
+            <p>A diversified trading business in Oman needs annual budgets and periodic forecasts that management can use to track profitability and working capital across business lines.</p>
+          </div>
+          <div>
+            <h4>My Approach</h4>
+            <ul>
+              <li>Prepared annual budgets and periodic forecasts</li>
+              <li>Monthly actual vs budget variance analysis covering revenue, costs and profitability</li>
+              <li>Supported financial performance reviews with management</li>
+              <li>Worked with ERP and finance teams on reporting requirements and process improvements</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Tools</h4>
+            <p>ERP reporting, Excel (Power Pivot, VBA)</p>
+          </div>
+          <div>
+            <h4>Outcome</h4>
+            <p>Structured budget and forecast cycle supporting management decisions, and stronger financial controls across departments.</p>
+            <!-- ADD METRIC if available -->
+          </div>
+        </div>
+      </article>
+
+      <!-- CASE 5 -->
+      <article class="case">
+        <span class="tag">Controls &middot; VAT &middot; Audit</span>
+        <h3>Reconciliations, VAT Compliance and Audit Readiness (UAE and Oman)</h3>
+        <div class="case-grid">
+          <div>
+            <h4>Problem</h4>
+            <p>Group businesses must keep intercompany balances agreed, meet VAT obligations in each jurisdiction and go into statutory audit with clean, supported balances.</p>
+          </div>
+          <div>
+            <h4>My Approach</h4>
+            <ul>
+              <li>Regular balance sheet, customer, supplier and intercompany reconciliations</li>
+              <li>UAE VAT compliance checks within the monthly close</li>
+              <li>Managed Oman VAT compliance</li>
+              <li>Coordinated statutory audits with external auditors and tax consultants</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Tools</h4>
+            <p>Microsoft Dynamics 365, Excel, audit working paper structure</p>
+          </div>
+          <div>
+            <h4>Outcome</h4>
+            <p>Reconciled and supported balances, compliance with IFRS, UAE VAT and internal financial controls, and well-prepared audit files.</p>
+            <!-- ADD METRIC if available, e.g. "Statutory audits closed with no material adjustments" — only if true -->
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- DASHBOARDS -->
+<section class="alt" id="dashboards">
+  <div class="wrap">
+    <p class="section-label">Reporting Samples</p>
+    <h2>Management reporting I build</h2>
+    <div class="note-banner"><b>Illustrative data.</b> These dashboards show a fictional diversified group with AED 540M annual revenue. They demonstrate the format and analysis I deliver to senior management. No figures come from any employer.</div>
+
+    <div class="kpis">
+      <div class="kpi"><div class="k">Revenue FY25</div><div class="v">AED 540.2M</div><div class="d"><span class="up">▲ 8.4%</span> YoY · <span class="up">+1.5%</span> vs budget</div></div>
+      <div class="kpi"><div class="k">Gross margin</div><div class="v">27.6%</div><div class="d"><span class="down">▼ 0.6 pp</span> vs budget 28.2%</div></div>
+      <div class="kpi"><div class="k">EBITDA</div><div class="v">AED 62.1M</div><div class="d">11.5% margin · <span class="up">▲ 15.4%</span> YoY</div></div>
+      <div class="kpi"><div class="k">Net profit</div><div class="v">AED 35.2M</div><div class="d">6.5% margin · after 9% UAE CT</div></div>
+      <div class="kpi"><div class="k">DSO</div><div class="v">58 days</div><div class="d"><span class="up">▼ 8 days</span> since Q1</div></div>
+      <div class="kpi"><div class="k">Cash conversion</div><div class="v">69 days</div><div class="d"><span class="up">▼ 19 days</span> since Q1</div></div>
+    </div>
+
+    <h3 class="dash-h">1. P&amp;L performance</h3>
+    <div class="dash-grid">
+      <div class="panel wide">
+        <h3>Monthly revenue: actual vs budget vs prior year</h3>
+        <div class="sub">AED millions, FY2025</div>
+        <div class="chart-box"><svg viewBox="0 0 960 320" width="100%" role="img" aria-label="Monthly revenue: actual vs budget vs prior year" font-family="Source Sans 3, Segoe UI, Arial, sans-serif" preserveAspectRatio="xMidYMid meet"><line x1="52" x2="944" y1="280.0" y2="280.0" stroke="#e3e6ea" stroke-width="1"/><text x="44" y="284.0" text-anchor="end" font-size="12" fill="#4f5661">0</text><line x1="52" x2="944" y1="198.0" y2="198.0" stroke="#e3e6ea" stroke-width="1"/><text x="44" y="202.0" text-anchor="end" font-size="12" fill="#4f5661">20</text><line x1="52" x2="944" y1="116.0" y2="116.0" stroke="#e3e6ea" stroke-width="1"/><text x="44" y="120.0" text-anchor="end" font-size="12" fill="#4f5661">40</text><line x1="52" x2="944" y1="34.0" y2="34.0" stroke="#e3e6ea" stroke-width="1"/><text x="44" y="38.0" text-anchor="end" font-size="12" fill="#4f5661">60</text><text x="12" y="157.0" font-size="12" fill="#4f5661" transform="rotate(-90 12 157.0)" text-anchor="middle">AED M</text><rect x="68.7" y="80.7" width="40.9" height="199.3" rx="2" fill="#1b2f4e"><title>Jan actual: AED 48.6M</title></rect><rect x="143.1" y="89.3" width="40.9" height="190.7" rx="2" fill="#1b2f4e"><title>Feb actual: AED 46.5M</title></rect><rect x="217.4" y="76.2" width="40.9" height="203.8" rx="2" fill="#1b2f4e"><title>Mar actual: AED 49.7M</title></rect><rect x="291.7" y="93.9" width="40.9" height="186.1" rx="2" fill="#1b2f4e"><title>Apr actual: AED 45.4M</title></rect><rect x="366.1" y="100.4" width="40.9" height="179.6" rx="2" fill="#1b2f4e"><title>May actual: AED 43.8M</title></rect><rect x="440.4" y="120.5" width="40.9" height="159.5" rx="2" fill="#1b2f4e"><title>Jun actual: AED 38.9M</title></rect><rect x="514.7" y="133.6" width="40.9" height="146.4" rx="2" fill="#1b2f4e"><title>Jul actual: AED 35.7M</title></rect><rect x="589.1" y="127.1" width="40.9" height="152.9" rx="2" fill="#1b2f4e"><title>Aug actual: AED 37.3M</title></rect><rect x="663.4" y="104.9" width="40.9" height="175.1" rx="2" fill="#1b2f4e"><title>Sep actual: AED 42.7M</title></rect><rect x="737.7" y="82.8" width="40.9" height="197.2" rx="2" fill="#1b2f4e"><title>Oct actual: AED 48.1M</title></rect><rect x="812.1" y="71.7" width="40.9" height="208.3" rx="2" fill="#1b2f4e"><title>Nov actual: AED 50.8M</title></rect><rect x="886.4" y="63.9" width="40.9" height="216.1" rx="2" fill="#1b2f4e"><title>Dec actual: AED 52.7M</title></rect><polyline points="89.2,96.3 163.5,104.1 237.8,92.2 312.2,108.2 386.5,114.4 460.8,132.8 535.2,145.1 609.5,139.0 683.8,118.5 758.2,98.0 832.5,87.7 906.8,80.7" fill="none" stroke="#aeb4bd" stroke-width="2.5" stroke-linejoin="round"/><polyline points="89.2,88.1 163.5,94.7 237.8,83.6 312.2,96.7 386.5,98.8 460.8,114.4 535.2,127.5 609.5,125.0 683.8,105.3 758.2,92.2 832.5,79.5 906.8,72.9" fill="none" stroke="#b08d57" stroke-width="2.5" stroke-dasharray="6 4" stroke-linejoin="round"/><circle cx="89.2" cy="88.1" r="3.5" fill="#b08d57"><title>Jan budget: AED 46.8M</title></circle><circle cx="163.5" cy="94.7" r="3.5" fill="#b08d57"><title>Feb budget: AED 45.2M</title></circle><circle cx="237.8" cy="83.6" r="3.5" fill="#b08d57"><title>Mar budget: AED 47.9M</title></circle><circle cx="312.2" cy="96.7" r="3.5" fill="#b08d57"><title>Apr budget: AED 44.7M</title></circle><circle cx="386.5" cy="98.8" r="3.5" fill="#b08d57"><title>May budget: AED 44.2M</title></circle><circle cx="460.8" cy="114.4" r="3.5" fill="#b08d57"><title>Jun budget: AED 40.4M</title></circle><circle cx="535.2" cy="127.5" r="3.5" fill="#b08d57"><title>Jul budget: AED 37.2M</title></circle><circle cx="609.5" cy="125.0" r="3.5" fill="#b08d57"><title>Aug budget: AED 37.8M</title></circle><circle cx="683.8" cy="105.3" r="3.5" fill="#b08d57"><title>Sep budget: AED 42.6M</title></circle><circle cx="758.2" cy="92.2" r="3.5" fill="#b08d57"><title>Oct budget: AED 45.8M</title></circle><circle cx="832.5" cy="79.5" r="3.5" fill="#b08d57"><title>Nov budget: AED 48.9M</title></circle><circle cx="906.8" cy="72.9" r="3.5" fill="#b08d57"><title>Dec budget: AED 50.5M</title></circle><text x="89.2" y="298.0" font-size="12" fill="#4f5661" text-anchor="middle">Jan</text><text x="163.5" y="298.0" font-size="12" fill="#4f5661" text-anchor="middle">Feb</text><text x="237.8" y="298.0" font-size="12" fill="#4f5661" text-anchor="middle">Mar</text><text x="312.2" y="298.0" font-size="12" fill="#4f5661" text-anchor="middle">Apr</text><text x="386.5" y="298.0" font-size="12" fill="#4f5661" text-anchor="middle">May</text><text x="460.8" y="298.0" font-size="12" fill="#4f5661" text-anchor="middle">Jun</text><text x="535.2" y="298.0" font-size="12" fill="#4f5661" text-anchor="middle">Jul</text><text x="609.5" y="298.0" font-size="12" fill="#4f5661" text-anchor="middle">Aug</text><text x="683.8" y="298.0" font-size="12" fill="#4f5661" text-anchor="middle">Sep</text><text x="758.2" y="298.0" font-size="12" fill="#4f5661" text-anchor="middle">Oct</text><text x="832.5" y="298.0" font-size="12" fill="#4f5661" text-anchor="middle">Nov</text><text x="906.8" y="298.0" font-size="12" fill="#4f5661" text-anchor="middle">Dec</text><rect x="52" y="10" width="12" height="12" rx="2" fill="#1b2f4e"/><text x="72" y="20" font-size="12.5" fill="#4f5661">Actual</text><line x1="128.8" x2="144.8" y1="16" y2="16" stroke="#b08d57" stroke-width="2.5" stroke-dasharray="5 3"/><text x="148.8" y="20" font-size="12.5" fill="#4f5661">Budget</text><line x1="205.60000000000002" x2="221.60000000000002" y1="16" y2="16" stroke="#aeb4bd" stroke-width="2.5"/><text x="225.60000000000002" y="20" font-size="12.5" fill="#4f5661">Prior year</text></svg></div>
+        <span class="scroll-hint">Swipe to see the full chart →</span>
+        <div class="insight"><b>Commentary:</b> Revenue closed 1.5% ahead of budget. Summer months (Jun–Aug) ran below plan, more than recovered by a strong Q4, which finished 4.4% above budget.</div>
+      </div>
+      <div class="panel">
+        <h3>EBITDA bridge: FY24 to FY25</h3>
+        <div class="sub">AED millions</div>
+        <div class="chart-box"><svg viewBox="0 0 520 330" width="100%" role="img" aria-label="EBITDA bridge FY24 to FY25" font-family="Source Sans 3, Segoe UI, Arial, sans-serif" preserveAspectRatio="xMidYMid meet"><line x1="52" x2="504" y1="258.0" y2="258.0" stroke="#e3e6ea" stroke-width="1"/><text x="44" y="262.0" text-anchor="end" font-size="12" fill="#4f5661">40</text><line x1="52" x2="504" y1="183.3" y2="183.3" stroke="#e3e6ea" stroke-width="1"/><text x="44" y="187.3" text-anchor="end" font-size="12" fill="#4f5661">50</text><line x1="52" x2="504" y1="108.7" y2="108.7" stroke="#e3e6ea" stroke-width="1"/><text x="44" y="112.7" text-anchor="end" font-size="12" fill="#4f5661">60</text><line x1="52" x2="504" y1="34.0" y2="34.0" stroke="#e3e6ea" stroke-width="1"/><text x="44" y="38.0" text-anchor="end" font-size="12" fill="#4f5661">70</text><text x="12" y="146.0" font-size="12" fill="#4f5661" transform="rotate(-90 12 146.0)" text-anchor="middle">AED M</text><rect x="64.9" y="155.0" width="38.7" height="103.0" rx="2" fill="#2c4672"><title>FY24 EBITDA: AED 53.8M</title></rect><text x="84.3" y="149.0" font-size="12" font-weight="600" fill="#4f5661" text-anchor="middle">53.8</text><rect x="129.5" y="69.8" width="38.7" height="85.1" rx="2" fill="#2e7d5b"><title>Volume: +11.4M</title></rect><line x1="103.7" x2="129.5" y1="155.0" y2="155.0" stroke="#aeb4bd" stroke-dasharray="3 3"/><text x="148.9" y="63.8" font-size="12" font-weight="600" fill="#4f5661" text-anchor="middle">+11.4</text><rect x="194.1" y="54.2" width="38.7" height="15.7" rx="2" fill="#2e7d5b"><title>Price / mix: +2.1M</title></rect><line x1="168.2" x2="194.1" y1="69.8" y2="69.8" stroke="#aeb4bd" stroke-dasharray="3 3"/><text x="213.4" y="48.2" font-size="12" font-weight="600" fill="#4f5661" text-anchor="middle">+2.1</text><rect x="258.6" y="54.2" width="38.7" height="29.1" rx="2" fill="#b0413e"><title>Cost inflation: -3.9M</title></rect><line x1="232.8" x2="258.6" y1="54.2" y2="54.2" stroke="#aeb4bd" stroke-dasharray="3 3"/><text x="278.0" y="48.2" font-size="12" font-weight="600" fill="#4f5661" text-anchor="middle">-3.9</text><rect x="323.2" y="83.3" width="38.7" height="16.4" rx="2" fill="#b0413e"><title>Staff costs: -2.2M</title></rect><line x1="297.4" x2="323.2" y1="83.3" y2="83.3" stroke="#aeb4bd" stroke-dasharray="3 3"/><text x="342.6" y="77.3" font-size="12" font-weight="600" fill="#4f5661" text-anchor="middle">-2.2</text><rect x="387.8" y="93.0" width="38.7" height="6.7" rx="2" fill="#2e7d5b"><title>Opex savings: +0.9M</title></rect><line x1="361.9" x2="387.8" y1="99.7" y2="99.7" stroke="#aeb4bd" stroke-dasharray="3 3"/><text x="407.1" y="87.0" font-size="12" font-weight="600" fill="#4f5661" text-anchor="middle">+0.9</text><line x1="426.5" x2="452.3" y1="93.0" y2="93.0" stroke="#aeb4bd" stroke-dasharray="3 3"/><rect x="452.3" y="93.0" width="38.7" height="165.0" rx="2" fill="#1b2f4e"><title>FY25 EBITDA: AED 62.1M</title></rect><text x="471.7" y="87.0" font-size="12" font-weight="700" fill="#1b2f4e" text-anchor="middle">62.1</text><text x="84.3" y="276.0" font-size="11.5" fill="#4f5661" text-anchor="end" transform="rotate(-28 84.3 276.0)">FY24 EBITDA</text><text x="148.9" y="276.0" font-size="11.5" fill="#4f5661" text-anchor="end" transform="rotate(-28 148.9 276.0)">Volume</text><text x="213.4" y="276.0" font-size="11.5" fill="#4f5661" text-anchor="end" transform="rotate(-28 213.4 276.0)">Price / mix</text><text x="278.0" y="276.0" font-size="11.5" fill="#4f5661" text-anchor="end" transform="rotate(-28 278.0 276.0)">Cost inflation</text><text x="342.6" y="276.0" font-size="11.5" fill="#4f5661" text-anchor="end" transform="rotate(-28 342.6 276.0)">Staff costs</text><text x="407.1" y="276.0" font-size="11.5" fill="#4f5661" text-anchor="end" transform="rotate(-28 407.1 276.0)">Opex savings</text><text x="471.7" y="276.0" font-size="11.5" fill="#4f5661" text-anchor="end" transform="rotate(-28 471.7 276.0)">FY25 EBITDA</text></svg></div>
+        <span class="scroll-hint">Swipe to see the full chart →</span>
+        <div class="insight"><b>Commentary:</b> Volume growth added AED 11.4M. Cost inflation of AED 3.9M was only partly recovered through pricing, which is where margin was lost.</div>
+      </div>
+      <div class="panel">
+        <h3>Margin trend by quarter</h3>
+        <div class="sub">Gross margin and EBITDA margin, %</div>
+        <div class="chart-box"><svg viewBox="0 0 520 320" width="100%" role="img" aria-label="Quarterly gross and EBITDA margin" font-family="Source Sans 3, Segoe UI, Arial, sans-serif" preserveAspectRatio="xMidYMid meet"><line x1="52" x2="504" y1="280.0" y2="280.0" stroke="#e3e6ea" stroke-width="1"/><text x="44" y="284.0" text-anchor="end" font-size="12" fill="#4f5661">0%</text><line x1="52" x2="504" y1="218.5" y2="218.5" stroke="#e3e6ea" stroke-width="1"/><text x="44" y="222.5" text-anchor="end" font-size="12" fill="#4f5661">10%</text><line x1="52" x2="504" y1="157.0" y2="157.0" stroke="#e3e6ea" stroke-width="1"/><text x="44" y="161.0" text-anchor="end" font-size="12" fill="#4f5661">20%</text><line x1="52" x2="504" y1="95.5" y2="95.5" stroke="#e3e6ea" stroke-width="1"/><text x="44" y="99.5" text-anchor="end" font-size="12" fill="#4f5661">30%</text><line x1="52" x2="504" y1="34.0" y2="34.0" stroke="#e3e6ea" stroke-width="1"/><text x="44" y="38.0" text-anchor="end" font-size="12" fill="#4f5661">40%</text><polyline points="108.5,107.2 221.5,108.4 334.5,116.4 447.5,109.6" fill="none" stroke="#1b2f4e" stroke-width="2.5" stroke-linejoin="round"/><circle cx="108.5" cy="107.2" r="3.5" fill="#1b2f4e"><title>Q1 gross margin: 28.1%</title></circle><circle cx="221.5" cy="108.4" r="3.5" fill="#1b2f4e"><title>Q2 gross margin: 27.9%</title></circle><circle cx="334.5" cy="116.4" r="3.5" fill="#1b2f4e"><title>Q3 gross margin: 26.6%</title></circle><circle cx="447.5" cy="109.6" r="3.5" fill="#1b2f4e"><title>Q4 gross margin: 27.7%</title></circle><polyline points="108.5,210.5 221.5,208.7 334.5,212.3 447.5,206.8" fill="none" stroke="#b08d57" stroke-width="2.5" stroke-linejoin="round"/><circle cx="108.5" cy="210.5" r="3.5" fill="#b08d57"><title>Q1 EBITDA margin: 11.3%</title></circle><circle cx="221.5" cy="208.7" r="3.5" fill="#b08d57"><title>Q2 EBITDA margin: 11.6%</title></circle><circle cx="334.5" cy="212.3" r="3.5" fill="#b08d57"><title>Q3 EBITDA margin: 11.0%</title></circle><circle cx="447.5" cy="206.8" r="3.5" fill="#b08d57"><title>Q4 EBITDA margin: 11.9%</title></circle><text x="108.5" y="97.2" font-size="12" fill="#1b2f4e" text-anchor="middle" font-weight="600">28.1%</text><text x="221.5" y="98.4" font-size="12" fill="#1b2f4e" text-anchor="middle" font-weight="600">27.9%</text><text x="334.5" y="106.4" font-size="12" fill="#1b2f4e" text-anchor="middle" font-weight="600">26.6%</text><text x="447.5" y="99.6" font-size="12" fill="#1b2f4e" text-anchor="middle" font-weight="600">27.7%</text><text x="108.5" y="200.5" font-size="12" fill="#b08d57" text-anchor="middle" font-weight="600">11.3%</text><text x="221.5" y="198.7" font-size="12" fill="#b08d57" text-anchor="middle" font-weight="600">11.6%</text><text x="334.5" y="202.3" font-size="12" fill="#b08d57" text-anchor="middle" font-weight="600">11.0%</text><text x="447.5" y="196.8" font-size="12" fill="#b08d57" text-anchor="middle" font-weight="600">11.9%</text><text x="108.5" y="298.0" font-size="12" fill="#4f5661" text-anchor="middle">Q1</text><text x="221.5" y="298.0" font-size="12" fill="#4f5661" text-anchor="middle">Q2</text><text x="334.5" y="298.0" font-size="12" fill="#4f5661" text-anchor="middle">Q3</text><text x="447.5" y="298.0" font-size="12" fill="#4f5661" text-anchor="middle">Q4</text><line x1="52" x2="68" y1="16" y2="16" stroke="#1b2f4e" stroke-width="2.5"/><text x="72" y="20" font-size="12.5" fill="#4f5661">Gross margin</text><line x1="169.6" x2="185.6" y1="16" y2="16" stroke="#b08d57" stroke-width="2.5"/><text x="189.6" y="20" font-size="12.5" fill="#4f5661">EBITDA margin</text></svg></div>
+        <span class="scroll-hint">Swipe to see the full chart →</span>
+        <div class="insight"><b>Commentary:</b> Gross margin dipped in Q3 as supplier price increases landed before price revisions. EBITDA margin held up through G&amp;A savings.</div>
+      </div>
+      <div class="panel wide">
+        <h3>Summary P&amp;L: actual vs budget</h3>
+        <div class="sub">AED millions, FY2025 · favourable variances in green, unfavourable in red</div>
+        <div class="tbl-wrap">
+          <table class="pl">
+            <thead><tr><th>Line</th><th>Actual</th><th>Budget</th><th>Var</th><th>Var %</th><th>Prior year</th></tr></thead>
+            <tbody>
+<tr class="total"><td>Revenue</td><td>540.2</td><td>532.0</td><td class="pos">+8.2</td><td class="pos">+1.5%</td><td>498.3</td></tr>
+<tr><td>Cost of sales</td><td>(391.1)</td><td>(382.0)</td><td class="neg">-9.1</td><td class="neg">-2.4%</td><td>(358.8)</td></tr>
+<tr class="total"><td>Gross profit</td><td>149.1</td><td>150.0</td><td class="neg">-0.9</td><td class="neg">-0.6%</td><td>139.5</td></tr>
+<tr><td>Staff costs</td><td>(47.6)</td><td>(46.8)</td><td class="neg">-0.8</td><td class="neg">-1.7%</td><td>(45.4)</td></tr>
+<tr><td>Premises & utilities</td><td>(9.8)</td><td>(10.1)</td><td class="pos">+0.3</td><td class="pos">+3.0%</td><td>(9.6)</td></tr>
+<tr><td>Selling & marketing</td><td>(15.9)</td><td>(16.4)</td><td class="pos">+0.5</td><td class="pos">+3.0%</td><td>(14.8)</td></tr>
+<tr><td>General & admin</td><td>(13.7)</td><td>(15.7)</td><td class="pos">+2.0</td><td class="pos">+12.7%</td><td>(15.9)</td></tr>
+<tr class="total"><td>EBITDA</td><td>62.1</td><td>61.0</td><td class="pos">+1.1</td><td class="pos">+1.8%</td><td>53.8</td></tr>
+<tr><td>Depreciation & amortisation</td><td>(14.0)</td><td>(14.2)</td><td class="pos">+0.2</td><td class="pos">+1.4%</td><td>(13.1)</td></tr>
+<tr><td>Finance costs</td><td>(9.5)</td><td>(9.0)</td><td class="neg">-0.5</td><td class="neg">-5.6%</td><td>(8.7)</td></tr>
+<tr class="total"><td>Profit before tax</td><td>38.6</td><td>37.8</td><td class="pos">+0.8</td><td class="pos">+2.1%</td><td>32.0</td></tr>
+<tr><td>Corporate tax (9%)</td><td>(3.4)</td><td>(3.4)</td><td class="">0.0</td><td class="">0.0%</td><td>(2.8)</td></tr>
+<tr class="total"><td>Net profit</td><td>35.2</td><td>34.4</td><td class="pos">+0.8</td><td class="pos">+2.3%</td><td>29.2</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="insight"><b>Commentary:</b> EBITDA beat budget by AED 1.1M despite a AED 0.9M gross profit shortfall, mainly from AED 2.0M of G&amp;A savings. Finance costs ran AED 0.5M over budget on higher working capital borrowing in H1.</div>
+      </div>
+    </div>
+
+    <h3 class="dash-h">2. Working capital and cash</h3>
+    <div class="dash-grid">
+      <div class="panel">
+        <h3>Receivables ageing</h3>
+        <div class="sub">AED millions, 31 Dec 2025 · total AED 85.8M</div>
+        <div class="chart-box"><svg viewBox="0 0 520 300" width="100%" role="img" aria-label="Receivables ageing" font-family="Source Sans 3, Segoe UI, Arial, sans-serif"><text x="82" y="50.0" font-size="12.5" fill="#4f5661" text-anchor="end">Current</text><rect x="92" y="30.4" width="312.1" height="31.2" rx="3" fill="#1b2f4e"><title>Current: AED 52.3M (61.0% of AR)</title></rect><text x="412.1" y="50.0" font-size="12.5" fill="#4f5661" font-weight="600">52.3 · 61%</text><text x="82" y="102.0" font-size="12.5" fill="#4f5661" text-anchor="end">1–30 days</text><rect x="92" y="82.4" width="102.6" height="31.2" rx="3" fill="#2c4672"><title>1–30 days: AED 17.2M (20.0% of AR)</title></rect><text x="202.6" y="102.0" font-size="12.5" fill="#4f5661" font-weight="600">17.2 · 20%</text><text x="82" y="154.0" font-size="12.5" fill="#4f5661" text-anchor="end">31–60 days</text><rect x="92" y="134.4" width="51.3" height="31.2" rx="3" fill="#b08d57"><title>31–60 days: AED 8.6M (10.0% of AR)</title></rect><text x="151.3" y="154.0" font-size="12.5" fill="#4f5661" font-weight="600">8.6 · 10%</text><text x="82" y="206.0" font-size="12.5" fill="#4f5661" text-anchor="end">61–90 days</text><rect x="92" y="186.4" width="25.7" height="31.2" rx="3" fill="#c9875a"><title>61–90 days: AED 4.3M (5.0% of AR)</title></rect><text x="125.7" y="206.0" font-size="12.5" fill="#4f5661" font-weight="600">4.3 · 5%</text><text x="82" y="258.0" font-size="12.5" fill="#4f5661" text-anchor="end">90+ days</text><rect x="92" y="238.4" width="20.3" height="31.2" rx="3" fill="#b0413e"><title>90+ days: AED 3.4M (4.0% of AR)</title></rect><text x="120.3" y="258.0" font-size="12.5" fill="#4f5661" font-weight="600">3.4 · 4%</text></svg></div>
+        <span class="scroll-hint">Swipe to see the full chart →</span>
+        <div class="insight"><b>Commentary:</b> 61% of receivables are current. Balances over 90 days are 4.0% of the book and are reviewed monthly against the expected credit loss provision (IFRS 9).</div>
+      </div>
+      <div class="panel">
+        <h3>Working capital days</h3>
+        <div class="sub">DSO, DIO, DPO and cash conversion cycle, days</div>
+        <div class="chart-box"><svg viewBox="0 0 520 320" width="100%" role="img" aria-label="Working capital days" font-family="Source Sans 3, Segoe UI, Arial, sans-serif" preserveAspectRatio="xMidYMid meet"><line x1="52" x2="504" y1="280.0" y2="280.0" stroke="#e3e6ea" stroke-width="1"/><text x="44" y="284.0" text-anchor="end" font-size="12" fill="#4f5661">0</text><line x1="52" x2="504" y1="230.8" y2="230.8" stroke="#e3e6ea" stroke-width="1"/><text x="44" y="234.8" text-anchor="end" font-size="12" fill="#4f5661">20</text><line x1="52" x2="504" y1="181.6" y2="181.6" stroke="#e3e6ea" stroke-width="1"/><text x="44" y="185.6" text-anchor="end" font-size="12" fill="#4f5661">40</text><line x1="52" x2="504" y1="132.4" y2="132.4" stroke="#e3e6ea" stroke-width="1"/><text x="44" y="136.4" text-anchor="end" font-size="12" fill="#4f5661">60</text><line x1="52" x2="504" y1="83.2" y2="83.2" stroke="#e3e6ea" stroke-width="1"/><text x="44" y="87.2" text-anchor="end" font-size="12" fill="#4f5661">80</text><line x1="52" x2="504" y1="34.0" y2="34.0" stroke="#e3e6ea" stroke-width="1"/><text x="44" y="38.0" text-anchor="end" font-size="12" fill="#4f5661">100</text><text x="12" y="157.0" font-size="12" fill="#4f5661" transform="rotate(-90 12 157.0)" text-anchor="middle">Days</text><rect x="80.2" y="63.5" width="56.5" height="216.5" rx="2" fill="#d4dae4"><title>Q1 FY25 cash conversion cycle: 88 days</title></rect><text x="108.5" y="57.5" font-size="12" font-weight="700" fill="#1b2f4e" text-anchor="middle">88</text><rect x="193.2" y="80.7" width="56.5" height="199.3" rx="2" fill="#d4dae4"><title>Q2 FY25 cash conversion cycle: 81 days</title></rect><text x="221.5" y="74.7" font-size="12" font-weight="700" fill="#1b2f4e" text-anchor="middle">81</text><rect x="306.2" y="95.5" width="56.5" height="184.5" rx="2" fill="#d4dae4"><title>Q3 FY25 cash conversion cycle: 75 days</title></rect><text x="334.5" y="89.5" font-size="12" font-weight="700" fill="#1b2f4e" text-anchor="middle">75</text><rect x="419.2" y="110.3" width="56.5" height="169.7" rx="2" fill="#d4dae4"><title>Q4 FY25 cash conversion cycle: 69 days</title></rect><text x="447.5" y="104.3" font-size="12" font-weight="700" fill="#1b2f4e" text-anchor="middle">69</text><polyline points="108.5,98.0 221.5,105.3 334.5,110.3 447.5,115.2" fill="none" stroke="#b08d57" stroke-width="2.5" stroke-linejoin="round"/><circle cx="108.5" cy="98.0" r="3.5" fill="#b08d57"><title>Q1 FY25 DIO: 74 days</title></circle><circle cx="221.5" cy="105.3" r="3.5" fill="#b08d57"><title>Q2 FY25 DIO: 71 days</title></circle><circle cx="334.5" cy="110.3" r="3.5" fill="#b08d57"><title>Q3 FY25 DIO: 69 days</title></circle><circle cx="447.5" cy="115.2" r="3.5" fill="#b08d57"><title>Q4 FY25 DIO: 67 days</title></circle><polyline points="108.5,117.6 221.5,125.0 334.5,129.9 447.5,137.3" fill="none" stroke="#1b2f4e" stroke-width="2.5" stroke-linejoin="round"/><circle cx="108.5" cy="117.6" r="3.5" fill="#1b2f4e"><title>Q1 FY25 DSO: 66 days</title></circle><circle cx="221.5" cy="125.0" r="3.5" fill="#1b2f4e"><title>Q2 FY25 DSO: 63 days</title></circle><circle cx="334.5" cy="129.9" r="3.5" fill="#1b2f4e"><title>Q3 FY25 DSO: 61 days</title></circle><circle cx="447.5" cy="137.3" r="3.5" fill="#1b2f4e"><title>Q4 FY25 DSO: 58 days</title></circle><polyline points="108.5,152.1 221.5,149.6 334.5,144.7 447.5,142.2" fill="none" stroke="#aeb4bd" stroke-width="2.5" stroke-linejoin="round"/><circle cx="108.5" cy="152.1" r="3.5" fill="#aeb4bd"><title>Q1 FY25 DPO: 52 days</title></circle><circle cx="221.5" cy="149.6" r="3.5" fill="#aeb4bd"><title>Q2 FY25 DPO: 53 days</title></circle><circle cx="334.5" cy="144.7" r="3.5" fill="#aeb4bd"><title>Q3 FY25 DPO: 55 days</title></circle><circle cx="447.5" cy="142.2" r="3.5" fill="#aeb4bd"><title>Q4 FY25 DPO: 56 days</title></circle><text x="108.5" y="298.0" font-size="12" fill="#4f5661" text-anchor="middle">Q1</text><text x="221.5" y="298.0" font-size="12" fill="#4f5661" text-anchor="middle">Q2</text><text x="334.5" y="298.0" font-size="12" fill="#4f5661" text-anchor="middle">Q3</text><text x="447.5" y="298.0" font-size="12" fill="#4f5661" text-anchor="middle">Q4</text><rect x="52" y="10" width="12" height="12" rx="2" fill="#d4dae4"/><text x="72" y="20" font-size="12.5" fill="#4f5661">CCC</text><line x1="108.4" x2="124.4" y1="16" y2="16" stroke="#1b2f4e" stroke-width="2.5"/><text x="128.4" y="20" font-size="12.5" fill="#4f5661">DSO</text><line x1="164.8" x2="180.8" y1="16" y2="16" stroke="#b08d57" stroke-width="2.5"/><text x="184.8" y="20" font-size="12.5" fill="#4f5661">DIO</text><line x1="221.20000000000002" x2="237.20000000000002" y1="16" y2="16" stroke="#aeb4bd" stroke-width="2.5"/><text x="241.20000000000002" y="20" font-size="12.5" fill="#4f5661">DPO</text></svg></div>
+        <span class="scroll-hint">Swipe to see the full chart →</span>
+        <div class="insight"><b>Commentary:</b> The cash conversion cycle fell from 88 to 69 days, driven by faster collections (DSO −8 days) and tighter stock control (DIO −7 days).</div>
+      </div>
+      <div class="panel wide">
+        <h3>13-week cash flow forecast</h3>
+        <div class="sub">AED millions · weekly receipts, payments and closing balance against a AED 25M minimum cash level</div>
+        <div class="chart-box"><svg viewBox="0 0 960 340" width="100%" role="img" aria-label="13-week cash flow forecast" font-family="Source Sans 3, Segoe UI, Arial, sans-serif" preserveAspectRatio="xMidYMid meet"><line x1="52" x2="944" y1="300.0" y2="300.0" stroke="#e3e6ea" stroke-width="1"/><text x="44" y="304.0" text-anchor="end" font-size="12" fill="#4f5661">-20</text><line x1="52" x2="944" y1="233.5" y2="233.5" stroke="#e3e6ea" stroke-width="1"/><text x="44" y="237.5" text-anchor="end" font-size="12" fill="#4f5661">0</text><line x1="52" x2="944" y1="167.0" y2="167.0" stroke="#e3e6ea" stroke-width="1"/><text x="44" y="171.0" text-anchor="end" font-size="12" fill="#4f5661">20</text><line x1="52" x2="944" y1="100.5" y2="100.5" stroke="#e3e6ea" stroke-width="1"/><text x="44" y="104.5" text-anchor="end" font-size="12" fill="#4f5661">40</text><line x1="52" x2="944" y1="34.0" y2="34.0" stroke="#e3e6ea" stroke-width="1"/><text x="44" y="38.0" text-anchor="end" font-size="12" fill="#4f5661">60</text><text x="12" y="167.0" font-size="12" fill="#4f5661" transform="rotate(-90 12 167.0)" text-anchor="middle">AED M</text><rect x="69.2" y="201.6" width="34.3" height="31.9" rx="2" fill="#2e7d5b"><title>W1 receipts: AED 9.6M</title></rect><rect x="69.2" y="233.5" width="34.3" height="29.6" rx="2" fill="#b0413e"><title>W1 payments: AED 8.9M</title></rect><rect x="137.8" y="197.6" width="34.3" height="35.9" rx="2" fill="#2e7d5b"><title>W2 receipts: AED 10.8M</title></rect><rect x="137.8" y="233.5" width="34.3" height="31.9" rx="2" fill="#b0413e"><title>W2 payments: AED 9.6M</title></rect><rect x="206.4" y="199.6" width="34.3" height="33.9" rx="2" fill="#2e7d5b"><title>W3 receipts: AED 10.2M</title></rect><rect x="206.4" y="233.5" width="34.3" height="30.3" rx="2" fill="#b0413e"><title>W3 payments: AED 9.1M</title></rect><rect x="275.0" y="195.6" width="34.3" height="37.9" rx="2" fill="#2e7d5b"><title>W4 receipts: AED 11.4M</title></rect><rect x="275.0" y="233.5" width="34.3" height="55.9" rx="2" fill="#b0413e"><title>W4 payments: AED 16.8M</title></rect><rect x="343.6" y="200.6" width="34.3" height="32.9" rx="2" fill="#2e7d5b"><title>W5 receipts: AED 9.9M</title></rect><rect x="343.6" y="233.5" width="34.3" height="31.3" rx="2" fill="#b0413e"><title>W5 payments: AED 9.4M</title></rect><rect x="412.2" y="198.3" width="34.3" height="35.2" rx="2" fill="#2e7d5b"><title>W6 receipts: AED 10.6M</title></rect><rect x="412.2" y="233.5" width="34.3" height="33.6" rx="2" fill="#b0413e"><title>W6 payments: AED 10.1M</title></rect><rect x="480.8" y="199.9" width="34.3" height="33.6" rx="2" fill="#2e7d5b"><title>W7 receipts: AED 10.1M</title></rect><rect x="480.8" y="233.5" width="34.3" height="29.9" rx="2" fill="#b0413e"><title>W7 payments: AED 9.0M</title></rect><rect x="549.5" y="194.3" width="34.3" height="39.2" rx="2" fill="#2e7d5b"><title>W8 receipts: AED 11.8M</title></rect><rect x="549.5" y="233.5" width="34.3" height="49.5" rx="2" fill="#b0413e"><title>W8 payments: AED 14.9M</title></rect><rect x="618.1" y="201.2" width="34.3" height="32.3" rx="2" fill="#2e7d5b"><title>W9 receipts: AED 9.7M</title></rect><rect x="618.1" y="233.5" width="34.3" height="32.6" rx="2" fill="#b0413e"><title>W9 payments: AED 9.8M</title></rect><rect x="686.7" y="198.9" width="34.3" height="34.6" rx="2" fill="#2e7d5b"><title>W10 receipts: AED 10.4M</title></rect><rect x="686.7" y="233.5" width="34.3" height="31.6" rx="2" fill="#b0413e"><title>W10 payments: AED 9.5M</title></rect><rect x="755.3" y="197.3" width="34.3" height="36.2" rx="2" fill="#2e7d5b"><title>W11 receipts: AED 10.9M</title></rect><rect x="755.3" y="233.5" width="34.3" height="33.9" rx="2" fill="#b0413e"><title>W11 payments: AED 10.2M</title></rect><rect x="823.9" y="196.3" width="34.3" height="37.2" rx="2" fill="#2e7d5b"><title>W12 receipts: AED 11.2M</title></rect><rect x="823.9" y="233.5" width="34.3" height="31.9" rx="2" fill="#b0413e"><title>W12 payments: AED 9.6M</title></rect><rect x="892.5" y="193.6" width="34.3" height="39.9" rx="2" fill="#2e7d5b"><title>W13 receipts: AED 12.0M</title></rect><rect x="892.5" y="233.5" width="34.3" height="57.5" rx="2" fill="#b0413e"><title>W13 payments: AED 17.3M</title></rect><line x1="52" x2="944" y1="233.5" y2="233.5" stroke="#4f5661" stroke-width="1"/><line x1="52" x2="944" y1="150.4" y2="150.4" stroke="#b08d57" stroke-width="1.8" stroke-dasharray="6 4"/><polyline points="86.3,104.8 154.9,100.8 223.5,97.2 292.2,115.1 360.8,113.5 429.4,111.8 498.0,108.1 566.6,118.5 635.2,118.8 703.8,115.8 772.5,113.5 841.1,108.1 909.7,125.8" fill="none" stroke="#1b2f4e" stroke-width="2.5" stroke-linejoin="round"/><circle cx="86.3" cy="104.8" r="3.5" fill="#1b2f4e"><title>W1 closing balance: AED 38.7M</title></circle><circle cx="154.9" cy="100.8" r="3.5" fill="#1b2f4e"><title>W2 closing balance: AED 39.9M</title></circle><circle cx="223.5" cy="97.2" r="3.5" fill="#1b2f4e"><title>W3 closing balance: AED 41.0M</title></circle><circle cx="292.2" cy="115.1" r="3.5" fill="#1b2f4e"><title>W4 closing balance: AED 35.6M</title></circle><circle cx="360.8" cy="113.5" r="3.5" fill="#1b2f4e"><title>W5 closing balance: AED 36.1M</title></circle><circle cx="429.4" cy="111.8" r="3.5" fill="#1b2f4e"><title>W6 closing balance: AED 36.6M</title></circle><circle cx="498.0" cy="108.1" r="3.5" fill="#1b2f4e"><title>W7 closing balance: AED 37.7M</title></circle><circle cx="566.6" cy="118.5" r="3.5" fill="#1b2f4e"><title>W8 closing balance: AED 34.6M</title></circle><circle cx="635.2" cy="118.8" r="3.5" fill="#1b2f4e"><title>W9 closing balance: AED 34.5M</title></circle><circle cx="703.8" cy="115.8" r="3.5" fill="#1b2f4e"><title>W10 closing balance: AED 35.4M</title></circle><circle cx="772.5" cy="113.5" r="3.5" fill="#1b2f4e"><title>W11 closing balance: AED 36.1M</title></circle><circle cx="841.1" cy="108.1" r="3.5" fill="#1b2f4e"><title>W12 closing balance: AED 37.7M</title></circle><circle cx="909.7" cy="125.8" r="3.5" fill="#1b2f4e"><title>W13 closing balance: AED 32.4M</title></circle><text x="86.3" y="318.0" font-size="12" fill="#4f5661" text-anchor="middle">W1</text><text x="154.9" y="318.0" font-size="12" fill="#4f5661" text-anchor="middle">W2</text><text x="223.5" y="318.0" font-size="12" fill="#4f5661" text-anchor="middle">W3</text><text x="292.2" y="318.0" font-size="12" fill="#4f5661" text-anchor="middle">W4</text><text x="360.8" y="318.0" font-size="12" fill="#4f5661" text-anchor="middle">W5</text><text x="429.4" y="318.0" font-size="12" fill="#4f5661" text-anchor="middle">W6</text><text x="498.0" y="318.0" font-size="12" fill="#4f5661" text-anchor="middle">W7</text><text x="566.6" y="318.0" font-size="12" fill="#4f5661" text-anchor="middle">W8</text><text x="635.2" y="318.0" font-size="12" fill="#4f5661" text-anchor="middle">W9</text><text x="703.8" y="318.0" font-size="12" fill="#4f5661" text-anchor="middle">W10</text><text x="772.5" y="318.0" font-size="12" fill="#4f5661" text-anchor="middle">W11</text><text x="841.1" y="318.0" font-size="12" fill="#4f5661" text-anchor="middle">W12</text><text x="909.7" y="318.0" font-size="12" fill="#4f5661" text-anchor="middle">W13</text><rect x="52" y="10" width="12" height="12" rx="2" fill="#2e7d5b"/><text x="72" y="20" font-size="12.5" fill="#4f5661">Receipts</text><rect x="142.4" y="10" width="12" height="12" rx="2" fill="#b0413e"/><text x="162.4" y="20" font-size="12.5" fill="#4f5661">Payments</text><line x1="232.8" x2="248.8" y1="16" y2="16" stroke="#1b2f4e" stroke-width="2.5"/><text x="252.8" y="20" font-size="12.5" fill="#4f5661">Closing balance</text><line x1="370.8" x2="386.8" y1="16" y2="16" stroke="#b08d57" stroke-width="2.5" stroke-dasharray="5 3"/><text x="390.8" y="20" font-size="12.5" fill="#4f5661">Minimum cash AED 25M</text></svg></div>
+        <span class="scroll-hint">Swipe to see the full chart →</span>
+        <div class="insight"><b>Commentary:</b> Weeks 4, 8 and 13 carry payroll, VAT and loan repayments. The closing balance stays above the AED 25M minimum throughout, with the lowest point of AED 32.4M in week 13.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TECHNICAL SKILLS -->
+<section class="alt" id="skills">
+  <div class="wrap">
+    <p class="section-label">Technical Skills</p>
+    <h2>Systems, tools and standards</h2>
+    <div class="skills">
+      <div class="skill">
+        <h3>ERP and Accounting Systems</h3>
+        <ul>
+          <li>Microsoft Dynamics 365</li>
+          <li>SAP FICO</li>
+          <li>Autoline (automotive DMS)</li>
+          <li>Tally Prime</li>
+          <li>QuickBooks</li>
+        </ul>
+      </div>
+      <div class="skill">
+        <h3>Reporting and Analytics</h3>
+        <ul>
+          <li>Advanced Excel</li>
+          <li>Power Query and Power Pivot</li>
+          <li>VBA and Macros</li>
+          <li>Power BI</li>
+          <li>Microsoft Office</li>
+        </ul>
+      </div>
+      <div class="skill">
+        <h3>Standards and Tax</h3>
+        <ul>
+          <li>IFRS reporting, including IFRS 16</li>
+          <li>UAE VAT</li>
+          <li>Oman VAT</li>
+          <li>India GST and income tax</li>
+        </ul>
+      </div>
+      <div class="skill">
+        <h3>Audit and Controls</h3>
+        <ul>
+          <li>Statutory, internal and stock audits</li>
+          <li>Internal financial controls</li>
+          <li>Audit coordination with external auditors</li>
+          <li>Process standardisation</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUALIFICATIONS -->
+<section id="qualifications">
+  <div class="wrap">
+    <p class="section-label">Qualifications</p>
+    <h2>Education and certifications</h2>
+    <div class="certs">
+      <div class="cert">
+        <h3>Chartered Accountant (FCA)</h3>
+        <p>Institute of Chartered Accountants of India (ICAI)</p>
+        <span class="yr">2014 – 2020</span>
+      </div>
+      <div class="cert">
+        <h3>Certified Public Accountant (CPA)</h3>
+        <p>CPA Australia (completed in Muscat, Oman)</p>
+        <span class="yr">2023 – 2024</span>
+      </div>
+      <div class="cert">
+        <h3>Bachelor of Commerce (B.Com.)</h3>
+        <p>The Maharaja Sayajirao University of Baroda, India</p>
+        <span class="yr">2013 – 2016</span>
+      </div>
+    </div>
+
+    <h3 class="subhead">Professional Development</h3>
+    <ul class="plain-list">
+      <li>AI for Finance – Level 1</li>
+      <li>Executive Development Program – Data Analysis and Visualization with Microsoft Excel Power Tools and Power BI</li>
+      <li>Power BI: Working Together with Microsoft 365 Apps</li>
+    </ul>
+
+    <h3 class="subhead">Languages</h3>
+    <p class="lead">English (Fluent) &nbsp;&middot;&nbsp; Hindi (Fluent) &nbsp;&middot;&nbsp; Gujarati (Native)</p>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <p class="section-label">Contact</p>
+    <h2>Let's talk</h2>
+    <p class="lead">I am open to Finance Manager opportunities. My full CV is available to download below.</p>
+    <div class="contact-grid">
+      <div class="contact-item">
+        <div class="k">Email</div>
+        <a href="mailto:cavaibhavlathiya123@gmail.com">cavaibhavlathiya123@gmail.com</a>
+      </div>
+      <div class="contact-item">
+        <div class="k">LinkedIn</div>
+        <a href="https://www.linkedin.com/in/cavaibhavlathiya" target="_blank" rel="noopener">linkedin.com/in/cavaibhavlathiya</a>
+      </div>
+      <div class="contact-item">
+        <div class="k">Phone</div>
+        <a href="tel:+971561336620">+971 56 133 6620</a>
+      </div>
+      <div class="contact-item">
+        <div class="k">Location</div>
+        <span>Dubai, UAE</span>
+      </div>
+    </div>
+    <div class="btns">
+      <a class="btn btn-primary" href="assets/cv.pdf" download>Download CV</a>
+      <a class="btn btn-outline" href="mailto:cavaibhavlathiya123@gmail.com">Send an Email</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; 2026 Vaibhav Lathiya, FCA, CPA</span>
+    <span>Case studies are anonymized and dashboards use illustrative data. No confidential employer information is disclosed.</span>
+  </div>
+</footer>
+
+
+
+</body>
+</html>
