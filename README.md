@@ -1,16 +1,17 @@
 # Vaibhav Lathiya, FCA, CPA – Finance Portfolio
 
-Professional portfolio of **Vaibhav Lathiya**, Chartered Accountant (ICAI) and CPA (CPA Australia) with 10+ years in finance, accounting and audit across the UAE, Oman and India.
+Professional portfolio of **Vaibhav Lathiya**, Chartered Accountant (ICAI) and CPA Australia, Finance Business Partner with 10+ years in finance operations, IFRS reporting, tax and audit across the UAE, Oman and India.
 
 **Live site:** https://cavaibhavlathiya.github.io
 
 ## Focus areas
 
-- Management reporting, MIS and financial dashboards
+- Finance operations, month-end and year-end close on Microsoft Dynamics 365
+- Management reporting, variance analysis and reporting automation (Power BI, Excel, AI tools)
 - Budgeting, forecasting and variance analysis
-- Month-end close and IFRS financial statements on Microsoft Dynamics 365
+- IFRS financial reporting and internal controls
 - Cash flow forecasting and working capital management
-- Reconciliations, UAE and Oman VAT compliance, internal controls and audit coordination
+- UAE VAT, UAE Corporate Tax and Oman VAT
 
 ## Repository contents
 
